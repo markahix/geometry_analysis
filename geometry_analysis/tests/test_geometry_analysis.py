@@ -20,3 +20,14 @@ def test_calculate_distance():
     expected_distance = np.sqrt(2.)
     calculated_distance = geometry_analysis.calculate_distance(r1,r2)
     assert expected_distance == calculated_distance
+
+def test_calculate_angle():
+    """
+    Test the calculate_angle function in measure.py
+    """
+    r1=np.array([0,10,1])
+    r2=np.array([0,0,0])
+    r3=np.array([1,0,0])
+    expected_angle = 90
+    calculated_angle = geometry_analysis.calculate_angle(r1,r2,r3,degrees=True)
+    assert expected_angle == calculated_angle
