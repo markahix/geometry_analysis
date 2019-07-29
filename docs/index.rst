@@ -13,11 +13,13 @@ Available Techniques:
 - *bonds*
 
 `Google <www.google.com>`_
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
    something
+   api
 
 Indices and tables
 ==================
