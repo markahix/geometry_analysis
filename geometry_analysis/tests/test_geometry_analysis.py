@@ -14,9 +14,7 @@ def water_molecule():
     symbols = ["H","O","H"]
     coordinates = np.array( [ [2,0,0],[0,0,0],[-2,0,0] ] )
 
-    water = geometry_analysis.Molecule(name,symbols,coordinates)
-
-    return water
+    return geometry_analysis.Molecule(name,symbols,coordinates)
 
 def test_geometry_analysis_imported():
     """Sample test, will always pass so long as import statement worked"""
@@ -53,8 +51,8 @@ def test_molecule_set_coordinates(water_molecule):
 def test_create_failure():
     """Test to see if passing incorrect type raises errors
     """
-    name = 25
-    symbols = ["H","O","H"]
     coordinates = np.array( [ [2,0,0],[0,0,0],[-2,0,0] ] )
     with pytest.raises(TypeError): #This ensures that a TypeError being raised results in a PASS, since that's what we want the code to do.
+        name = 25
+        symbols = ["H","O","H"]
         water = geometry_analysis.Molecule(name, symbols, coordinates)

@@ -28,8 +28,7 @@ def calculate_distance(rA, rB):
     0.1
     """
     dist_vec = (rA - rB)
-    distance = np.linalg.norm(dist_vec)
-    return distance
+    return np.linalg.norm(dist_vec)
 
 
 def calculate_angle(rA, rB, rC, degrees=False):
